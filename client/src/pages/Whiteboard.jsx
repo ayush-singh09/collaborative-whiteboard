@@ -10,7 +10,7 @@ const WhiteBoard = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("#000000");
   const [lineWidth, setLineWidth] = useState(5);
 
   const presetColors = [
