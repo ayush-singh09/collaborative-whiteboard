@@ -3,15 +3,13 @@ import { RingLoader } from "react-spinners";
 import axios from "axios";
 
 const JoiningRoomComponent = () => {
-  const [roomId, setRoomId] = useState("")
+  const [roomId, setRoomId] = useState("");
   const createRoom = async () => {
     await axios
-      .get("http://localhost:3002/api/room/create")
+      .get("https://collaborative-whiteboard-ysxd.onrender.com/api/room/create")
       .then((res) => {
         console.log(res.data.roomId);
-        window.open(
-          `/whiteboard/${res.data.roomId}`,"_self"
-        );
+        window.open(`/whiteboard/${res.data.roomId}`, "_self");
       })
       .catch((err) => {
         console.error("Error creating room:", err);
@@ -28,7 +26,12 @@ const JoiningRoomComponent = () => {
         className="bg-base-200 w-full p-2 px-4 rounded "
         type="text"
       />
-      <button onClick={()=>window.open(`/whiteboard/${roomId}`, "_self")}  className="btn w-full">JOIN</button>
+      <button
+        onClick={() => window.open(`/whiteboard/${roomId}`, "_self")}
+        className="btn w-full"
+      >
+        JOIN
+      </button>
       <h1 onClick={createRoom} className="text-sm text-center text-blue-500">
         don't have any room? create one
       </h1>

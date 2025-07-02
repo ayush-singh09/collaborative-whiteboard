@@ -65,7 +65,9 @@ const WhiteBoard = () => {
 
   const getImage = async () => {
     await axios
-      .get(`http://localhost:3002/api/room/${roomid}`)
+      .get(
+        `https://collaborative-whiteboard-ysxd.onrender.com/api/room/${roomid}`
+      )
       .then((res) => {
         if (res.data?.error == "Room not found") {
           alert("Room not found");
@@ -192,7 +194,7 @@ const WhiteBoard = () => {
         />
         <button className="btn bg-[#EF4444] border-none" onClick={clearCanvas}>
           <LuEraser /> Clear
-        </button> 
+        </button>
       </div>
       <div className="h-[92%] bg-[#b9b8b8] flex items-center justify-center relative">
         <img
