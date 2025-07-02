@@ -157,7 +157,7 @@ const WhiteBoard = () => {
       <div className="h-screen flex flex-col">
         {isLoading && (
           <div className="absolute top-0 left-0 z-10 bg-[white] w-screen h-screen flex items-center justify-center">
-            <RingLoader className="text-[black]" color="" />
+            <RingLoader size={80} className="text-[black]" color="" />
           </div>
         )}
         <div className="flex h-[8%] w-full items-center gap-4 bg-[white] px-5">
