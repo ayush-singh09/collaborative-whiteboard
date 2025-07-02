@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { RingLoader } from "react-spinners";
 import axios from "axios";
 
 const JoiningRoomComponent = () => {
@@ -35,7 +34,7 @@ const JoiningRoomComponent = () => {
       <h1 onClick={createRoom} className="text-sm text-center text-blue-500">
         don't have any room? create one
       </h1>
-      {/* <RingLoader className="text-green-300" color="" /> */}
+      
     </div>
   );
 };
